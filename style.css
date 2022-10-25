@@ -102,8 +102,9 @@ main {
 	margin: 0 auto;
 }
 
-.task-list {
+.task_list {
 	padding: 1rem;
+	counter-reset: section;
 }
 
 .task_list > h2 {
@@ -111,6 +112,11 @@ main {
 	font-weight: 300;
 	color: whitesmoke;
 	margin-bottom: 1rem;
+}
+
+.task .content::before {
+	counter-increment: section;
+	content: counter(section) ". ";
 }
 
 .task {
